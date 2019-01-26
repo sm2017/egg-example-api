@@ -18,7 +18,9 @@ class UserController extends Controller {
     const { ctx, service } = this;
     // 校验参数
     ctx.validate(ctx.rule.createUserRequest);
-
+	/**
+	 * @type {string}
+	 */
     let user = ctx.request.body;
 
     ctx.body = await service.user.createUser(user);
@@ -51,6 +53,10 @@ class UserController extends Controller {
    */
   async get() {
     const { ctx, service } = this;
+
+	/**
+	 * @type {string}
+	 */
     let id = ctx.params.id;
 
     ctx.body = await service.user.getUser(id);
@@ -81,6 +87,9 @@ class UserController extends Controller {
    */
   async update() {
     const { ctx, service } = this;
+	/**
+	 * @type {string}
+	 */
     let id = ctx.params.id;
     // 校验参数
     ctx.validate(ctx.rule.updateUserRequest);
