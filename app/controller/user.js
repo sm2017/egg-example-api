@@ -7,6 +7,10 @@ const Controller = require('egg').Controller;
  */
 class UserController extends Controller {
 
+  async _myPrivateFunction(){
+  
+  }
+
   /**
    * @summary 创建用户
    * @description 创建用户，记录用户账户/密码/类型
